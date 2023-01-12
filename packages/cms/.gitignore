@@ -26,13 +26,14 @@ jspm_packages/
 .eslintcache
 *.tgz
 .yarn-integrity
+.tmp
 .cache
+.strapi-updater.json
+build
+dist
 !/.projenrc.js
-/dist/changelog.md
-/dist/version.txt
 !/test/
 /tsconfig.dev.json
 !/src/
 /lib
 /dist/
-/.dockerignore

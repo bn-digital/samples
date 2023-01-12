@@ -1,0 +1,15 @@
+{
+  "name": "GraphQL API",
+  "schemaPath": "./packages/cms/src/graphql/schema.graphql",
+  "includes": [
+    "./packages/website/src/graphql/**/*.graphql"
+  ],
+  "extensions": {
+    "endpoints": {
+      "development": {
+        "url": "http://127.0.0.1:1337/graphql",
+        "introspect": true
+      }
+    }
+  }
+}
