@@ -4,8 +4,6 @@ documents:
 config:
   namingConvention:
     transformUnderscore: true
-  maybeValue: T | null | undefined
-  inputMaybeValue: T | null | undefined
   experimentalFragmentVariables: true
   scalars:
     Date: string
@@ -18,8 +16,6 @@ config:
 generates:
   src/graphql/index.tsx:
     plugins:
-      - fragment-matcher:
-          useExplicitTyping: true
       - typescript-react-apollo:
           addDocBlocks: false
           withComponent: true
@@ -33,3 +29,7 @@ generates:
     plugins:
       - typescript
       - typescript-operations
+hooks:
+  afterAllFileWrite:
+    - npx prettier --write
+    - npx eslint --fix

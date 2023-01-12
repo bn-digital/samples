@@ -1,0 +1,5 @@
+fragment Me on UsersPermissionsUser {
+  username
+  blocked
+
+}
